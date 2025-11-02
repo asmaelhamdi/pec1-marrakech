@@ -1,0 +1,66 @@
+@use "../variables";
+
+/* ------------------------------------- Header -------------------------------- */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  box-shadow: variables.$shadow-sm;
+  transition: all 0.3s ease;
+
+  &__container {
+    max-width: variables.$max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    max-width: 150px;
+    transition: opacity 0.3s ease;
+
+    &:hover { 
+      opacity: 0.8; 
+    }
+  }
+
+  /* Menú de navegación */
+
+  &__nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__nav-link {
+    color: variables.$color-text;
+    font-weight: 500;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: variables.$color-primary;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &.active {
+      color: variables.$color-accent;
+    }
+  }
+}

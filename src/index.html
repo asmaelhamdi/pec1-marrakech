@@ -1,27 +1,187 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Guía turística de Marrakech con lugares imprescindibles, gastronomía y consejos prácticos.">
+    <!--Hoja de estilos-->
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>Marrakech - Guía turística</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" href="./assets/images/favicon-32x32.png" type="image/png">
   </head>
+
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
+    <!--Header-->
+    <include src="views/header.html"></include>
+
+    <!--Main-->
+    <main id="main-content" class="main">
+
+      <!--Hero section-->
+      <section class="hero" aria-label="Introducción a Marrakech">
+        <div class="hero__background" role="img" aria-label="Vista panorámica de Marrakech al atardecer"></div>
+
+        <div class="hero__content">
+          <h1 class="hero__title">Marrakech, la joya roja de Marruecos</h1>
+          <p class="hero__subtitle">Una ciudad donde cada rincón cuenta una historia.</p>
+          <a href="#" class="hero__button">Explorar</a>
+        </div>
+      </section>
+
+      <!--Sobre Marrakech-->
+      <section class="section section--about" id="sobre-marrakech" aria-label="Información sobre Marrakech">
+        <div class="section__container">
+          
+          <header class="section__header">
+            <h2 class="section__title">Sobre Marrakech</h2>
+          </header>
+
+          <div class="section__body">
+            <!-- Texto -->
+            <div class="section__text-wrapper">
+              <p class="section__text">
+                <strong>Marrakech</strong> es una ciudad que combina <strong>historia</strong>, <strong>cultura</strong> y vida moderna. Su medina, declarada Patrimonio de la Humanidad por la 
+                <abbr title="Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura">UNESCO</abbr>, es un laberinto de callejuelas que despierta los sentidos. 
+                Podrás perderte entre <strong>zocos</strong> repletos de <strong>artesanía local</strong> y disfrutar de su <strong>gastronomía típica</strong>, como el <strong>tajine</strong> o el <strong>cuscús</strong>.
+              </p>
+
+              <p class="section__text">
+                Más allá de la medina, barrios como <strong>Guéliz</strong> y <strong>Hivernage</strong> ofrecen cafés, galerías de arte y boutiques modernas. Los palacios y jardines, como los <strong>Jardines Majorelle</strong>, muestran siglos de <strong>patrimonio arquitectónico</strong>. Marrakech es un lugar donde lo <strong>tradicional</strong> y lo <strong>contemporáneo</strong> conviven armoniosamente.
+              </p>
+
+              <p class="section__text">
+                Al pasear por sus calles, se siente una mezcla única de <strong>aromas</strong>, <strong>colores</strong> y <strong>sonidos</strong>. Cada esquina parece contar una historia, y cada plaza tiene su propia vida.
+              </p>
+            </div>
+
+            <!-- Imagen -->
+            <figure class="section__figure">
+              <img src="./assets/images/section-sobre-marrakech.webp" 
+                  alt="Vista aérea de la medina de Marrakech con sus tejados rojizos">
+              <figcaption>La medina, corazón histórico de la ciudad roja.</figcaption>
+            </figure>
+
+          </div>
+        </div>
+      </section>
+
+      <!--Qué ver-->
+      <section class="section section--attractions" id="que-ver">
+        <div class="section__container">
+          <header class="section__header">
+            <h2 class="section__title">Qué ver en Marrakech</h2>
+          </header>
+
+          <div class="cards">
+            <article class="card">
+              <figure class="card__image">
+                <img src="./assets/images/section-plaza-jmaae-marrakech.webp" alt="Plaza Jemaa el-Fna al anochecer con puestos iluminados">
+              </figure>
+              <div class="card__body">
+                <h3 class="card__title">Plaza Jemaa el-Fna</h3>
+                <p class="card__text">
+                  El corazón palpitante de Marrakech, donde los sonidos, aromas y luces se mezclan en un espectáculo único.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <figure class="card__image">
+                <img src="./assets/images/section-jardines-marrakech.webp" alt="Jardines Majorelle con el edificio azul y vegetación exótica">
+              </figure>
+              <div class="card__body">
+                <h3 class="card__title">Jardines Majorelle</h3>
+                <p class="card__text">
+                  Un remanso de paz creado por Jacques Majorelle y restaurado por Yves Saint Laurent. Colores vivos y vegetación exuberante.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <figure class="card__image">
+                <img src="./assets/images/section-zoco-marrakech.webp" alt="Zoco de Marrakech con lámparas artesanales y colores dorados">
+              </figure>
+              <div class="card__body">
+                <h3 class="card__title">Medina y Zocos</h3>
+                <p class="card__text">
+                  Piérdete entre zocos, talleres de artesanía y cafés escondidos. Una experiencia sensorial en cada esquina.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--Gastronomía-->
+      <section class="section section--food" id="donde-comer">
+        <div class="section__container">
+          <header class="section__header">
+            <h2 class="section__title">Sabores de Marrakech</h2>
+          </header>
+
+          <div class="section__body">
+            <!-- Texto -->
+            <div class="section__text-wrapper">
+              <p class="section__text">
+                La gastronomía marroquí combina <strong>especias</strong>, <strong>tradición</strong> y <strong>hospitalidad</strong>. Prueba el <strong>tajine</strong>, el <strong>cuscús</strong> o el inconfundible <strong>té a la menta</strong> en una terraza con vistas al atardecer. Otros platos que no te puedes perder son <strong>pastilla</strong>, <strong>harira</strong> y los <strong>pinchos morunos</strong>, todos llenos de <strong>sabores auténticos</strong>.
+              </p>
+
+              <p class="section__text">
+                Los mercados y zocos también ofrecen <strong>dátiles</strong>, <strong>aceitunas</strong> y dulces como <strong>chebakia</strong> y <strong>gazelle horns</strong>, perfectos para acompañar un café o té tradicional. Comer en Marrakech no es solo <strong>alimentarse</strong>, sino experimentar la <strong>cultura</strong> y la <strong>vida local</strong>.
+              </p>
+
+              <blockquote class="blockquote">
+                <p>
+                  "Probar la gastronomía marroquí es como viajar por la historia y cultura de <strong>Marrakech</strong> en cada bocado."
+                </p>
+              </blockquote>
+            </div>
+
+            <!-- Imagen -->
+            <figure class="section__figure">
+              <img src="./assets/images/section-marrakech-cuscus.webp" alt="Platos de tajine tradicional marroquí servidos en mesa de cerámica">
+              <figcaption>El cuscús y el tajine, símbolos de la cocina marroquí.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!--Consejos-->
+      <section class="section section--tips" id="consejos">
+        <div class="section__container">
+          <header class="section__header">
+            <h2 class="section__title">Consejos prácticos</h2>
+          </header>
+
+          <ul class="consejos-listado">
+            <li class="consejos-listado__item">
+              <i class="fas fa-sun"></i> <strong>Mejor época:</strong> primavera y otoño, cuando las temperaturas son agradables y los zocos están llenos de vida.
+            </li>
+            <li class="consejos-listado__item">
+              <i class="fas fa-money-bill-wave"></i> <strong>Moneda:</strong> Dirham marroquí (<abbr title="Dirham marroquí">MAD</abbr>). Es recomendable llevar algo de efectivo, especialmente para pequeños puestos o mercados.
+            </li>
+            <li class="consejos-listado__item">
+              <i class="fas fa-comments"></i> <strong>Idiomas:</strong> árabe y francés. Aprender algunas frases básicas te ayudará mucho con la <strong>hospitalidad local</strong>.
+            </li>
+            <li class="consejos-listado__item">
+              <i class="fas fa-eye"></i> <strong>Consejo:</strong> regatear es parte del juego cultural, pero siempre con respeto y sonrisa. ¡Forma parte de la experiencia!
+            </li>
+            <li class="consejos-listado__item">
+              <i class="fas fa-hiking"></i> <strong>Calzado cómodo:</strong> Marrakech se disfruta caminando por la medina y sus callejuelas, así que lleva zapatos cómodos.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!--Footer-->
+    <include src="views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
 </html>
