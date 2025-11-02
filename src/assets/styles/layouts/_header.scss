@@ -8,26 +8,26 @@
   z-index: 100;
   padding: 1rem 0;
   background: rgba(variables.$color-light, 0.98);
-  backdrop-filter: blur(12px);
   box-shadow: variables.$shadow-sm;
+  backdrop-filter: blur(12px);
   transition: all 0.3s ease;
 
   &__container {
-    max-width: variables.$max-width;
-    margin: 0 auto;
-    padding: 0 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    max-width: variables.$max-width;
+    padding: 0 1rem;
+    margin: 0 auto;
 
     @media (max-width: variables.$mq-tablet) {
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
       gap: 0.75rem;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
   }
 
@@ -37,8 +37,8 @@
     transition: opacity 0.3s ease;
 
     @media (max-width: variables.$mq-tablet) {
-      margin: 0 auto;
       display: block;
+      margin: 0 auto;
     }
   }
 
@@ -48,53 +48,53 @@
     flex-grow: 1;
 
     @media (max-width: variables.$mq-tablet) {
-      width: 100%;
-      order: 2; 
+      order: 2;
+      width: 100%; 
       margin-top: 0.5rem;
     }
   }
 
   &__nav-list {
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
     gap: 1rem;
-    margin: 0;
+    align-items: center;
+    justify-content: flex-end;
     padding: 0;
+    margin: 0;
+    list-style: none;
 
     @media (max-width: variables.$mq-tablet) {
-      justify-content: center;
-      gap: 0.75rem;
       flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
     }
   }
 
   &__nav-item {
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 
   &__nav-link {
-    color: variables.$color-text;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 1rem;
     position: relative;
-    transition: color 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+    color: variables.$color-text;
+    text-decoration: none;
     outline: none !important;
-    box-shadow: none !important;
-    border: none;
     background: none;
+    border: none;
+    box-shadow: none !important;
+    transition: color 0.3s ease;
 
     &::after {
-      content: "";
       position: absolute;
       bottom: -3px;
       left: 0;
       width: 0;
       height: 2px;
+      content: "";
       background-color: variables.$color-primary;
       transition: width 0.3s ease;
     }

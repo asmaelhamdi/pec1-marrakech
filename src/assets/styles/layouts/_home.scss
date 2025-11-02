@@ -4,8 +4,8 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 html {
@@ -28,11 +28,11 @@ body {
 /* Tipografía */
 
 h1, h2, h3, h4, h5, h6 {
+  margin: 0;
   font-family: variables.$font-family-sans;
   font-weight: 700;
   line-height: 1.2;
   color: variables.$color-dark;
-  margin: 0;
 }
 
 h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
@@ -60,21 +60,21 @@ a {
 /* Citas de bloque */
 
 .blockquote {
-  border-left: 4px solid variables.$color-accent;
-  background-color: variables.$color-light;
   padding: 1rem 1.5rem;
+  font-size: 1rem;
   font-style: italic;
   color: variables.$color-text;
-  font-size: 1rem;
+  background-color: variables.$color-light;
+  border-left: 4px solid variables.$color-accent;
 
   strong { 
-    color: variables.$color-primary; 
     font-weight: 700; 
+    color: variables.$color-primary; 
   }
 
   @media (min-width: variables.$mq-tablet) {
-    font-size: 1.125rem;
     padding: 1.25rem 2rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -82,35 +82,35 @@ a {
 
 .hero {
   position: relative;
-  isolation: isolate;
-  padding: 2rem 1rem;
-  min-height: 45vh;
-  color: variables.$color-light;
-  text-align: center;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 45vh;
+  padding: 2rem 1rem;
+  overflow: hidden;
+  color: variables.$color-light;
+  text-align: center;
   background-color: variables.$color-dark; /* fallback si falla imagen */
+  isolation: isolate;
 
   @media (min-width: variables.$mq-tablet) {
-    padding: 3rem 1.5rem;
     min-height: 55vh;
+    padding: 3rem 1.5rem;
   }
 
   @media (min-width: variables.$mq-desktop) {
-    padding: 4rem 1.5rem;
     min-height: 60vh;
+    padding: 4rem 1.5rem;
   }
 
   &__background {
     position: absolute;
     inset: 0;
-    background-image: url("../images/hero-bg-marrakech.webp");
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.55) contrast(1.05);
     z-index: 0;
+    background-image: url("../images/hero-bg-marrakech.webp");
+    background-position: center;
+    background-size: cover;
+    filter: brightness(0.55) contrast(1.05);
   }
 
   &__content {
@@ -121,15 +121,15 @@ a {
   }
 
   &__title {
+    margin-bottom: 1rem;
     color: variables.$color-light;
     letter-spacing: -0.02em;
-    margin-bottom: 1rem;
   }
 
   &__subtitle {
+    margin-bottom: 2rem;
     font-size: clamp(1.125rem, 2.5vw, 1.25rem);
     color: variables.$color-light;
-    margin-bottom: 2rem;
   }
 
   &__button {
@@ -138,18 +138,18 @@ a {
     font-size: 1rem;
     font-weight: 600;
     color: variables.$color-light;
+    text-decoration: none;
     background: variables.$color-primary;
     border-radius: variables.$border-radius-sm;
-    text-decoration: none;
     transition: all 0.3s ease;
 
     &:hover,
     &:focus-visible {
-      background: variables.$color-accent;
       color: variables.$color-light;
+      outline: none;
+      background: variables.$color-accent;
       box-shadow: variables.$shadow-md;
       transform: translateY(-2px);
-      outline: none;
     }
   }
 }
@@ -184,8 +184,8 @@ a {
 
     @media (min-width: variables.$mq-tablet) {
       grid-template-columns: 1.8fr 1.2fr;
-      align-items: center;
       gap: 3rem;
+      align-items: center;
     }
   }
 
@@ -205,44 +205,44 @@ a {
   }
 
   &__figure {
-    border-radius: variables.$border-radius;
-    overflow: hidden;
     max-width: 100%;
     margin: 0 auto;
+    overflow: hidden;
+    border-radius: variables.$border-radius;
 
     img {
+      display: block;
       width: 100%;
       height: auto;
       aspect-ratio: 16 / 9;
       object-fit: cover;
-      display: block;
       transition: transform 0.5s ease;
     }
 
     figcaption {
+      padding: 0.75rem 1rem;
       font-size: 0.875rem;
       color: variables.$color-grey;
-      padding: 0.75rem 1rem;
-      background-color: rgba(variables.$color-light, 0.95);
       text-align: center;
+      background-color: rgba(variables.$color-light, 0.95);
     }
   }
 
   &__button {
     display: inline-block;
-    background: variables.$color-accent;
-    color: variables.$color-light;
     padding: 0.75rem 1.5rem;
-    border-radius: variables.$border-radius;
-    font-weight: 600;
-    text-decoration: none;
     margin-top: 1.5rem;
+    font-weight: 600;
+    color: variables.$color-light;
+    text-decoration: none;
+    background: variables.$color-accent;
+    border-radius: variables.$border-radius;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      transform: translateY(-2px);
       box-shadow: variables.$shadow-md;
       opacity: 0.9;
+      transform: translateY(-2px);
     }
   }
 }
@@ -259,9 +259,9 @@ a {
 }
 
 .card {
+  overflow: hidden;
   background-color: variables.$color-light;
   border-radius: variables.$border-radius;
-  overflow: hidden;
 
   &:hover,
   &:focus-within {
@@ -279,9 +279,9 @@ a {
   }
 
   &__title {
+    margin-bottom: 0.5rem;
     font-size: 1.25rem;
     color: variables.$color-primary;
-    margin-bottom: 0.5rem;
   }
 
   &__text {
@@ -292,29 +292,29 @@ a {
 
 /* ------------------------------------- Consejos -------------------------------- */
 
-.consejos-listado {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.consejos__listado {
   display: grid;
   gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 
   &__item {
-    background-color: variables.$color-light;
-    border-radius: variables.$border-radius-sm;
     padding: 1rem 1.25rem;
     font-size: 1rem;
     line-height: 1.6;
+    background-color: variables.$color-light;
+    border-radius: variables.$border-radius-sm;
 
     strong {
       color: variables.$color-primary;
     }
 
     i {
-      color: variables.$color-accent; 
+      margin-right: 0.5rem; 
       font-size: 1.1rem;
       vertical-align: middle;
-      margin-right: 0.5rem;
+      color: variables.$color-accent;
     }
   }
 }
