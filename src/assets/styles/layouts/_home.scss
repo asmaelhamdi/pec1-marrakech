@@ -90,7 +90,7 @@ a {
   overflow: hidden;
   color: variables.$color-light;
   text-align: center;
-  background-color: variables.$color-dark; /* fallback si falla imagen */
+  background-color: variables.$color-dark; 
   isolation: isolate;
 
   @media (min-width: variables.$mq-tablet) {
@@ -299,8 +299,7 @@ a {
   margin: 0;
   list-style: none;
 
-  &__item {
-
+  &-item {  
     padding: 1rem 1.25rem;
     font-size: 1rem;
     line-height: 1.6;
