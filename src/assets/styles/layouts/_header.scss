@@ -7,7 +7,7 @@
   top: 0;
   z-index: 100;
   padding: 1rem 0;
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(variables.$color-light, 0.98);
   backdrop-filter: blur(12px);
   box-shadow: variables.$shadow-sm;
   transition: all 0.3s ease;
@@ -20,34 +20,78 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-  }
+    gap: 0.5rem;
 
-  &__logo {
-    max-width: 150px;
-    transition: opacity 0.3s ease;
-
-    &:hover { 
-      opacity: 0.8; 
+    @media (max-width: variables.$mq-tablet) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 0.75rem;
     }
   }
 
-  /* Menú de navegación */
+  &__logo {
+    max-width: 160px;
+    height: auto;
+    transition: opacity 0.3s ease;
+
+    @media (max-width: variables.$mq-tablet) {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  /* ---------------------- Navegación ---------------------- */
+
+  &__nav {
+    flex-grow: 1;
+
+    @media (max-width: variables.$mq-tablet) {
+      width: 100%;
+      order: 2; 
+      margin-top: 0.5rem;
+    }
+  }
 
   &__nav-list {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: variables.$mq-tablet) {
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__nav-item {
+    margin: 0;
+    padding: 0;
   }
 
   &__nav-link {
     color: variables.$color-text;
     font-weight: 500;
+    text-decoration: none;
+    font-size: 1rem;
     position: relative;
+    transition: color 0.3s ease;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none;
+    background: none;
 
     &::after {
       content: "";
       position: absolute;
-      bottom: -2px;
+      bottom: -3px;
       left: 0;
       width: 0;
       height: 2px;
@@ -55,12 +99,24 @@
       transition: width 0.3s ease;
     }
 
-    &:hover::after {
+    &:hover,
+    &:focus-visible {
+      color: variables.$color-accent;
+    }
+
+    &:hover::after,
+    &:focus-visible::after {
       width: 100%;
     }
 
     &.active {
       color: variables.$color-accent;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none !important;
+      box-shadow: none !important;
     }
   }
 }
